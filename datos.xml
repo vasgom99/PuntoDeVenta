@@ -1,0 +1,60 @@
+<datos>
+    <clientes>
+        <client>
+            <nit>000001</nit>
+            <nombre>Juan carlo</nombre>
+            <direccion>4ta calle 9-23</direccion>
+        </client>
+        <client>
+            <nit>000002</nit>
+            <nombre>mara rene</nombre>
+            <direccion>9na calle 10-50</direccion>
+        </client>
+    </clientes>
+    <productos>
+        <product>
+            <nombre>waro</nombre>
+            <descripcion>warito rico</descripcion>
+            <precio>1</precio>
+            <stock>1000</stock>
+        </product>
+        <product>
+            <nombre>cusha</nombre>
+            <descripcion>cushita rica</descripcion>
+            <precio>2</precio>
+            <stock>1000</stock>
+        </product>
+    </productos>
+    <facturas>
+        <factura>
+            <fecha>Fecha de la Factura 1</fecha>
+            <cliente>
+                <nit>000001</nit>
+                <nombre>Juan carlo</nombre>
+                <direccion>Dirección del Cliente 1</direccion>
+            </cliente>
+            <productos>
+                <producto>
+                    <nombre>waro</nombre>
+                    <cantidad>31</cantidad>
+                    <precio>1</precio>
+                </producto>
+            </productos>
+        </factura>
+        <factura>
+            <fecha>Fecha de la Factura 2</fecha>
+            <cliente>
+                <nit>000002</nit>
+                <nombre>maria rene</nombre>
+                <direccion>9na calle 10-50</direccion>
+            </cliente>
+            <productos>
+                <producto>
+                    <nombre>cusha</nombre>
+                    <cantidad>5</cantidad>
+                    <precio>2</precio>
+                </producto>
+            </productos>
+        </factura>
+    </facturas>
+</datos>
