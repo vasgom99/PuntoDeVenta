@@ -1,0 +1,51 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de Clientes{% endblock %}
+
+{% block contenido %} 
+
+    <div class="card">
+        <div class="card-header"><a
+            name=""
+            id=""
+            class="btn btn-success"
+            href="{% url 'Crear' %}"
+            role="button"
+            >Agregar nuevo Cliente</a>
+        </div>
+    
+    <div class="card-body">
+        <h4 class="card-title">Clientes</h4>
+        <div class="table-responsive">
+            <table class="table table-striped"> <!-- Cambié table-primary por table-striped para un mejor contraste -->
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nit</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Clientes in datos %}
+                        <tr>
+                            <td>{{ Clientes.numero }}</td>
+                            <td>{{ Clientes.nit }}</td>
+                            <td>{{ Clientes.nombre }}</td>
+                            <td>{{ Clientes.direccion }}</td>
+                            <td>
+                                <a href="{% url 'Editar' Clientes.numero %}" class="btn btn-info" role="button">Editar</a>
+                                |  
+                                <a href="{% url 'Eliminar' Clientes.numero %}" class="btn btn-danger" role="button">Borrar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

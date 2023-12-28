@@ -1,0 +1,53 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de Productos {% endblock %}
+
+{% block contenido %} 
+
+    <div class="card">
+        <div class="card-header"><a
+            name=""
+            id=""
+            class="btn btn-success"
+            href="{% url 'Fundar' %}"
+            role="button"
+            >Agregar nuevo libro</a>
+        </div>
+    
+    <div class="card-body">
+        <h4 class="card-title">Productos</h4>
+        <div class="table-responsive">
+            <table class="table table-striped"> <!-- Cambié table-primary por table-striped para un mejor contraste -->
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Productos in datos %}
+                        <tr>
+                            <td>{{ Productos.numero }}</td>
+                            <td>{{ Productos.nombre }}</td>
+                            <td>{{ Productos.descripcion }}</td>
+                            <td>{{ Productos.precio }}</td>
+                            <td>{{ Productos.stock }}</td>
+                            <td>
+                                <a href="{% url 'Corregir' Productos.numero %}" class="btn btn-info" role="button">Editar</a>
+                                |  
+                                <a href="{% url 'Excluir' Productos.numero %}" class="btn btn-danger" role="button">Borrar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

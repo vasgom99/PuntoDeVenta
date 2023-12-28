@@ -1,0 +1,51 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de Facturas {% endblock %}
+
+{% block contenido %} 
+
+    <div class="card">
+        <div class="card-header"><a
+            name=""
+            id=""
+            class="btn btn-success"
+            href="{% url 'Idear' %}"
+            role="button"
+            >Agregar nueva Factura</a>
+        </div>
+    
+    <div class="card-body">
+        <h4 class="card-title">Facturas</h4>
+        <div class="table-responsive">
+            <table class="table table-striped"> <!-- Cambié table-primary por table-striped para un mejor contraste -->
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Maestro</th>
+                        <th scope="col">Detalle</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Facturas in datos %}
+                        <tr>
+                            <td>{{ Facturas.numero }}</td>
+                            <td>{{ Facturas.nombre }}</td>
+                            <td>{{ Facturas.maestro }}</td>
+                            <td>{{ Facturas.detalle }}</td>
+                            <td>
+                                <a href="{% url 'Revisar' Facturas.numero %}" class="btn btn-info" role="button">Editar</a>
+                                |  
+                                <a href="{% url 'Quitar' Facturas.numero %}" class="btn btn-danger" role="button">Borrar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
