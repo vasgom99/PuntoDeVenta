@@ -4,20 +4,24 @@
 
 {% block contenido %} 
 
-    <div class="card">
-        <div class="card-header"><a
-            name=""
-            id=""
-            class="btn btn-success"
-            href="{% url 'Fundar' %}"
-            role="button"
-            >Agregar nuevo producto</a>
-        </div>
+<div class="card">
     
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'Fundar' %}" role="button">Agregar nuevo producto</a>
+    </div>
+
     <div class="card-body">
+        <h4 class="card-title">Buscar Productos</h4>
+        <form method="get" action="{% url 'Productos' %}">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Nombre del producto" name="search_query">
+                <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            </div>
+        </form>      
+            <a href="{% url 'Productos' %}" class="btn btn-secondary">Mostrar Todas</a>
         <h4 class="card-title">Productos</h4>
         <div class="table-responsive">
-            <table class="table table-striped"> <!-- Cambié table-primary por table-striped para un mejor contraste -->
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>

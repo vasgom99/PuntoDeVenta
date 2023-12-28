@@ -16,9 +16,18 @@ def informacion(request):
 #Vista de Cliente
 def Clientes(request):
     ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Clientes.xml'
+
+    # Cargar todos los datos del XML
     datos = cargar_xml(ruta_xml)
-    print(datos)
+
+    # Realizar la búsqueda por nombre si se proporciona un query en la URL
+    search_query = request.GET.get('search_query', '')
+    if search_query:
+        # Filtrar los datos por nombre
+        datos = [cliente for cliente in datos if search_query.lower() in cliente.nombre.lower()]
+
     return render(request, 'Clientes/cliente.html', {'datos': datos})
+
 
 def Crear_Clientes(request):
     # Asignar la ruta XML de manera automática (puedes modificar esto según tus necesidades)
@@ -90,8 +99,16 @@ def Eliminar_Clientes(request, numero):
 # Vistas Factura 
 def Facturas(request):
     ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Facturas.xml'
+
+    # Cargar todos los datos del XML
     datos = cargar_xml_factura(ruta_xml)
-    print(datos)
+
+    # Realizar la búsqueda por nombre si se proporciona un query en la URL
+    search_query = request.GET.get('search_query', '')
+    if search_query:
+        # Filtrar los datos por nombre
+        datos = [factura for factura in datos if search_query.lower() in factura.nombre.lower()]
+
     return render(request, 'Facturas/factura.html', {'datos': datos})
    
 def Idear_Facturas(request):
@@ -161,9 +178,18 @@ def Quitar_Facturas(request, numero):
 # Vista Producto
 def Productos(request):
     ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Productos.xml'
+
+    # Cargar todos los datos del XML
     datos = cargar_xml_producto(ruta_xml)
-    print(datos)
+
+    # Realizar la búsqueda por nombre si se proporciona un query en la URL
+    search_query = request.GET.get('search_query', '')
+    if search_query:
+        # Filtrar los datos por nombre
+        datos = [producto for producto in datos if search_query.lower() in producto.nombre.lower()]
+
     return render(request, 'Productos/producto.html', {'datos': datos})
+
 
 def Fundar_Productos(request):
     # Asignar la ruta XML de manera automática (puedes modificar esto según tus necesidades)
