@@ -199,7 +199,7 @@ def Corregir_Productos(request, numero):
     if request.method == 'POST':
         # Obtener los datos actualizados desde el formulario de edición
         numero_editar = request.POST.get('numero')
-        nombre = request.POST.get('titulo')
+        nombre = request.POST.get('nombre')
         descripcion = request.POST.get('descripcion')
         precio = request.POST.get('precio')
         stock = request.POST.get('stock')

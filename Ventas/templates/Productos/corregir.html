@@ -9,12 +9,12 @@
     <div class="card-body">
         <h4 class="card-title">Datos del Producto</h4>
         
-        <form method="post" action="{% url 'Editar' Producto_corregir.numero %}" enctype="multipart/form-data">
+        <form method="post" action="{% url 'Corregir' Producto_corregir.numero %}" enctype="multipart/form-data">
             {% csrf_token %}
             
             <div class="form-group">
                 <label for="numero">Número:</label>
-                <input type="text" name="numero" class="form-control" value="{{ Procuto_corregir.numero }}" required>
+                <input type="text" name="numero" class="form-control" value="{{ Producto_corregir.numero }}" required>
             </div>
             
             <div class="form-group">

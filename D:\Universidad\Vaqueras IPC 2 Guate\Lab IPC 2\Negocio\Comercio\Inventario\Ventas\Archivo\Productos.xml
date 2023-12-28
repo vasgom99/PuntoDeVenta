@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root><item><numero>1</numero><nombre>producto 1</nombre><descripcion>descripcion 1</descripcion><precio>2</precio><stock>4</stock></item><item><numero>2</numero><nombre>producto 2</nombre><descripcion>descripcion 2</descripcion><precio>55</precio><stock>1</stock></item></root>

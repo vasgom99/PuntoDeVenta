@@ -50,6 +50,7 @@ def agregar_datos_xml_producto(ruta_xml, nuevos_datos):
             numero=nuevos_datos['numero'],
             nombre=nuevos_datos['nombre'],
             descripcion=nuevos_datos['descripcion'],
+            precio = nuevos_datos['precio'],
             stock=nuevos_datos['stock']
         )
 
