@@ -1,0 +1,30 @@
+<form method="post" action="{% url 'Crear' %}" enctype="multipart/form-data" style="background-size: cover;">
+ {% csrf_token %}
+ <input type="hidden" name="ruta_xml" value="{{ ruta_xml }}">
+ 
+ <div class="form-group">
+     <label for="numero">Numero:</label>
+     <input type="text" name="numero" class="form-control" required>
+ </div>
+ 
+ <div class="form-group">
+     <label for="nit">Nit:</label>
+     <input type="text" name="nit" class="form-control" required>
+ </div>
+ 
+ <div class="form-group">
+     <label for="nombre">Nombre:</label>
+     <input type="text" name="nombre" class="form-control" required>
+ </div>
+ 
+ <div class="form-group">
+     <label for="direccion">Direccion:</label>
+     <input type="text" name="direccion" class="form-control" required>
+ </div>
+
+ <button type="submit" class="btn btn-primary">Agregar Datos</button>
+
+ <a href="{% url 'Clientes' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+
+
