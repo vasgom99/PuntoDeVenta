@@ -6,7 +6,7 @@
 
 <div class="card">
     <div class="card-header">
-        <a name="" id="" class="btn btn-success" href="{% url 'Idear' %}" role="button">Agregar nueva Factura</a>
+        <a name="" id="" class="btn btn-info" href="{% url 'Idear' %}" role="button">Agregar nueva Factura</a>
     </div>
 
     <div class="card-body">
@@ -14,12 +14,12 @@
         <form method="get" action="{% url 'Facturas' %}">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Nombre de la factura" name="search_query">
-                <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                <button class="btn btn-outline-info" type="submit">Buscar</button>
             </div>
         </form>
 
         <!-- Botón para regresar a la tabla completa -->
-        <a href="{% url 'Facturas' %}" class="btn btn-secondary">Mostrar Todas</a>
+        <a href="{% url 'Facturas' %}" class="btn btn-info">Mostrar Todas</a>
 
         <h4 class="card-title">Facturas</h4>
         <div class="table-responsive">

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root><item><numero>1</numero><nombre>Pepsi</nombre><descripcion>Gaseosa</descripcion><precio>23</precio><stock>3</stock></item><item><numero>2</numero><nombre>Aceite Vegetal</nombre><descripcion>Litro de aceite</descripcion><precio>18</precio><stock>4</stock></item></root>

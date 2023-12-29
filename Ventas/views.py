@@ -10,12 +10,15 @@ def inicio(request):
 
 def informacion(request):
     return render(request, 'paginas/informacion.html')
+
+def reportes(request):
+    return render(request, 'Reportes/reportes.html')
   
 ##################################################################################################################################  
    
 #Vista de Cliente
 def Clientes(request):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Clientes.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Clientes.xml'
 
     # Cargar todos los datos del XML
     datos = cargar_xml(ruta_xml)
@@ -31,7 +34,7 @@ def Clientes(request):
 
 def Crear_Clientes(request):
     # Asignar la ruta XML de manera automática (puedes modificar esto según tus necesidades)
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Clientes.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Clientes.xml'
 
     if request.method == 'POST':
         numero = request.POST.get('numero')
@@ -56,7 +59,7 @@ def Crear_Clientes(request):
 
 # Funciones en Prueba
 def Editar_Clientes(request, numero):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Clientes.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Clientes.xml'
 
     # Cargar datos existentes del XML
     datos = cargar_xml(ruta_xml)
@@ -86,7 +89,7 @@ def Editar_Clientes(request, numero):
     return render(request, 'Clientes/editar.html', {'ruta_xml': ruta_xml, 'Cliente_editar': cliente_editar})
 
 def Eliminar_Clientes(request, numero):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Clientes.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Clientes.xml'
 
     # Eliminar datos del XML
     eliminar_datos_xml(ruta_xml, numero)
@@ -98,7 +101,7 @@ def Eliminar_Clientes(request, numero):
    
 # Vistas Factura 
 def Facturas(request):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Facturas.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Facturas.xml'
 
     # Cargar todos los datos del XML
     datos = cargar_xml_factura(ruta_xml)
@@ -113,7 +116,7 @@ def Facturas(request):
    
 def Idear_Facturas(request):
     # Asignar la ruta XML de manera automática (puedes modificar esto según tus necesidades)
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Facturas.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Facturas.xml'
 
     if request.method == 'POST':
         numero = request.POST.get('numero')
@@ -135,7 +138,7 @@ def Idear_Facturas(request):
     return render(request, 'Facturas/idear.html', {'ruta_xml': ruta_xml})
 
 def Revisar_Facturas(request, numero):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Facturas.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Facturas.xml'
 
     # Cargar datos existentes del XML
     datos = cargar_xml_factura(ruta_xml)
@@ -166,7 +169,7 @@ def Revisar_Facturas(request, numero):
                   
 
 def Quitar_Facturas(request, numero):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Facturas.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Facturas.xml'
 
     # Eliminar datos del XML
     eliminar_datos_xml_factura(ruta_xml, numero)
@@ -177,7 +180,7 @@ def Quitar_Facturas(request, numero):
 
 # Vista Producto
 def Productos(request):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Productos.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Productos.xml'
 
     # Cargar todos los datos del XML
     datos = cargar_xml_producto(ruta_xml)
@@ -193,7 +196,7 @@ def Productos(request):
 
 def Fundar_Productos(request):
     # Asignar la ruta XML de manera automática (puedes modificar esto según tus necesidades)
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Productos.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Productos.xml'
 
     if request.method == 'POST':
         numero = request.POST.get('numero')
@@ -217,7 +220,7 @@ def Fundar_Productos(request):
     return render(request, 'Productos/fundar.html', {'ruta_xml': ruta_xml})
 
 def Corregir_Productos(request, numero):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Productos.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Productos.xml'
 
     # Cargar datos existentes del XML
     datos = cargar_xml_producto(ruta_xml)
@@ -249,7 +252,7 @@ def Corregir_Productos(request, numero):
     return render(request, 'Productos/corregir.html', {'ruta_xml': ruta_xml, 'Producto_corregir': producto_corregir})
 
 def Excluir_Productos(request, numero):
-    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\Negocio\\Comercio\\Inventario\\Ventas\\Archivo\\Productos.xml'
+    ruta_xml = 'D:\\Universidad\\Vaqueras IPC 2 Guate\\Lab IPC 2\\IPC2_Proyecto2Diciembre_Grupo-10\\Ventas\\Archivo\\Productos.xml'
 
     # Eliminar datos del XML
     eliminar_datos_xml_producto(ruta_xml, numero)

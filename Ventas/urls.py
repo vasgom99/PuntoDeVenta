@@ -19,4 +19,6 @@ urlpatterns = [
     path('Productos/fundar', views.Fundar_Productos, name='Fundar'),
     path('Productos/corregir/<str:numero>/', views.Corregir_Productos, name='Corregir'),
     path('Productos/excluir/<str:numero>/', views.Excluir_Productos, name='Excluir'),
+    #######################################################################################
+    path('Reportes', views.reportes, name='Reportes'),
 ]
